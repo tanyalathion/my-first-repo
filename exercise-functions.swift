@@ -7,8 +7,9 @@ Chaque fois qu'un coffre à trésor est déverrouillé, l'inventaire de barres d
 var goldBars = 0
 
 func unlockTreasureChest (inventory:Int) -> Int {
-inventory + 100
+inventory + 100  /* NB: Pas besoin du mot-clé <return> dans une fonction qui renvoie une expression implicite. */
 }
+
 goldBars = unlockTreasureChest(inventory: goldBars)
 print(goldBars)
 
