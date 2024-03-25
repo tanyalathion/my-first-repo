@@ -4,8 +4,22 @@ Le but du jeu est de parcourir les sept mers et d'accumuler des lingots d'or en 
 Dans cet exercice, vous allez créer une fonction permettant de déverrouiller des coffres au trésor.
 Chaque fois qu'un coffre à trésor est déverrouillé, l'inventaire de barres d'or du joueur augmente de 100. */
 
+var goldBars = 0
 
+func unlockTreasureChest (inventory:Int) -> Int {
+inventory + 100
+}
+goldBars = unlockTreasureChest(inventory: goldBars)
+print(goldBars)
+
+goldBars = unlockTreasureChest(inventory: goldBars)
+print(goldBars)
+
+goldBars = unlockTreasureChest(inventory: goldBars)
+print(goldBars)
 
 /* ----------------------- TEST ------------------------------
-Insert outputs here
+100
+200
+300
 */
