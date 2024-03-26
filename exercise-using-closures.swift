@@ -1,10 +1,11 @@
 /* ----------------------- SENARIO ------------------------------
 Vous souhaitez faire circuler les instructions de déverrouillage du coffre au trésor dans votre base de code.
-Pour étendre cette fonctionnalité, vous allez abstraire les instructions dans une fermeture.
+Pour étendre cette fonctionnalité, vous allez écrire les instructions dans une fermeture.
 Une fermeture vous permet d'enregistrer des instructions dans une variable/constante.
+
 Vous utiliserez une constante au lieu d'une variable car vous n'aurez besoin
 d'assigner la fermeture qu'une seule fois dans cet exercice.
-Grâce à la fonctionnalité contenue dans une constante,
+Grâce à la fonctionnalité contenue dans la constante,
 vous pouvez faire circuler la constante comme n'importe quelle autre constante.
 Outre l'exécution de blocs de code, vous pouvez enregistrer une fermeture dans une variable/constante.
 La fermeture est donc plus polyvalente qu'une fonction.
@@ -13,6 +14,15 @@ L'enregistrement d'une fermeture dans une variable/constante est un exemple de s
 Dans cet exercice, vous vous entraînerez à écrire une fermeture pour déverrouiller un coffre au trésor.
 ----------------------------------------------------------- */
 
+var goldBars=0
+
+let unlockTreasureChest = {(inventory: inout Int) in
+    inventory += 100
+}
+
+unlockTreasureChest(&goldBars)
+print(goldBars)
+
 /* ----------------------- TEST ------------------------------
-Put outputs here
+100
 ----------------------------------------------------------- */
