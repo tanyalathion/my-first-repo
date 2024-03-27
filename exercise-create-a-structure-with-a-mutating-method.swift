@@ -6,7 +6,18 @@ Il doit également être possible de mettre à jour le nom de la personne
 pour tenir compte de tout changement de réservation.
 ----------------------------------------------------------- */
 
+struct TableReservation {
+    var name: String
+    let tableNumber: Int
+    mutating func updateBooking (updatedName:String){
+        name = updatedName
+    }
+}
 
+var johnBooking = TableReservation(name:"John", tableNumber:1)
+print(johnBooking)
+johnBooking.updateBooking(updatedName:"Maria")
+print(johnBooking)
 
 /* ----------------------- TEST ------------------------------
 TableReservation(name: "John", tableNumber: 1)
